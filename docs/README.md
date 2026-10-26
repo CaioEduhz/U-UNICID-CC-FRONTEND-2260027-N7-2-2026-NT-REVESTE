@@ -1,7 +1,7 @@
 # Trocaverde — Projeto de Site (Atividade A2, Front-End)
 
 **Equipe:** ReVeste
-**Integrantes:** Ana Souza, Bruno Lima, Carla Mendes, Diego Rocha
+**Integrantes:** Caio Eduardo Almeida (47791934) | Davi Henrique (47434899) | gabrielly Witai (47396750) | Igor Santos (46630902) | Isabela Calisto (47645695) | Maria Eduarda Peres (47644451)
 **Instituição/Curso:** UNICID — Curso Superior de Informática, disciplina Front-End
 
 ## Objetivos
@@ -37,10 +37,12 @@ ReVeste/
 
 | Integrante | Responsabilidades |
 |---|---|
-| Ana Souza | index, sobre, contato, orcamento_hospedagem; liderança da equipe |
-| Bruno Lima | projetos, impacto; documentação em /docs |
-| Carla Mendes | acessibilidade, galeria; revisão de acessibilidade |
-| Diego Rocha | midia, noticias; testes de navegação |
+| Caio Eduardo Almeida | index, sobre, contato|
+| Davi Henrique | projetos, documentação em /docs |
+| Gabrielly Witai | midia, noticias, testes de navegação |
+| Igor Santos |  galeria, impacto |
+| Isabela Calisto | liderança da equipe, orçamento_hospedagem |
+| Maria Eduarda Peres | acessibilidade, revisão de acessibilidade |
 
 ## Pendências conhecidas desta versão
 
