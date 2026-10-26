@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Trocaverde</title>
+  <meta name="description" content="Fale com a equipe do Trocaverde: envie dúvidas, sugestões ou agende uma doação de roupas.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
+          <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
+        </svg>
+        Trocaverde
+      </a>
+      <input type="checkbox" id="nav-toggle" class="visually-hidden" aria-label="Abrir ou fechar o menu de navegação">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <svg viewBox="0 0 24 24" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </label>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="impacto.html">Impacto</a></li>
+          <li><a href="acessibilidade.html">Acessibilidade</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="midia.html">Mídia</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="page-hero">
+      <div class="container">
+        <h1>Fale com a gente</h1>
+        <p>Dúvidas, sugestões ou vontade de agendar uma doação? Preencha o formulário e respondemos em até 3 dias úteis.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Formulário de contato</h2>
+          <p>Os campos marcados com asterisco (*) são obrigatórios. Nesta versão, o envio é apenas demonstrativo.</p>
+        </div>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Seus dados</legend>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="nome">Nome completo *</label>
+                <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone <span class="hint">(com DDD, ex.: 11 91234-5678)</span></label>
+                <input type="tel" id="telefone" name="telefone" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" title="Informe DDD e número, por exemplo (11) 91234-5678" autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="cep">CEP <span class="hint">(ex.: 03071-000)</span></label>
+                <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" title="Informe 8 dígitos, por exemplo 03071-000" inputmode="numeric" autocomplete="postal-code">
+              </div>
+              <div class="field">
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" autocomplete="bday">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Sua mensagem</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="assunto">Assunto *</label>
+                <select id="assunto" name="assunto" required>
+                  <option value="">Selecione uma opção</option>
+                  <option value="duvida">Dúvida sobre o projeto</option>
+                  <option value="doacao">Agendar doação de roupas</option>
+                  <option value="parceria">Proposta de parceria</option>
+                  <option value="acessibilidade">Relatar problema de acessibilidade</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="pecas">Quantidade de peças <span class="hint">(para doações)</span></label>
+                <input type="number" id="pecas" name="pecas" min="1" max="500" step="1">
+              </div>
+              <div class="field full">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" required minlength="10" maxlength="800"></textarea>
+              </div>
+              <div class="field full">
+                <label class="check" for="aceite">
+                  <input type="checkbox" id="aceite" name="aceite" required>
+                  <span>Concordo em receber resposta da equipe pelos contatos informados. *</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Outros canais</h2>
+          <p>Dados fictícios, criados para fins acadêmicos.</p>
+        </div>
+        <ul class="leaf-list">
+          <li><strong>E-mail:</strong> contato@trocaverde.example</li>
+          <li><strong>Telefone:</strong> (11) 4000-1234</li>
+          <li><strong>Endereço:</strong> Rua das Trocas, 120, Brás, São Paulo - SP</li>
+          <li><strong>Atendimento:</strong> segunda a sexta, das 9h às 17h</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Quem faz o Trocaverde</h2>
+          <p>Equipe ReVeste, responsável pelo desenvolvimento deste site.</p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>Ana Souza</h3>
+            <p class="team-role">Líder da equipe</p>
+            <p>Responsável por index, sobre, contato e orçamento de hospedagem.</p>
+          </article>
+          <article class="card">
+            <h3>Bruno Lima</h3>
+            <p class="team-role">Conteúdo e documentação</p>
+            <p>Responsável por projetos, impacto e pela pasta /docs.</p>
+          </article>
+          <article class="card">
+            <h3>Carla Mendes</h3>
+            <p class="team-role">Acessibilidade e imagens</p>
+            <p>Responsável por acessibilidade e galeria.</p>
+          </article>
+          <article class="card">
+            <h3>Diego Rocha</h3>
+            <p class="team-role">Mídia e notícias</p>
+            <p>Responsável por mídia e notícias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2>Trocaverde</h2>
+          <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+        </div>
+        <div>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="sobre.html">Sobre o projeto</a></li>
+            <li><a href="projetos.html">Projetos e parcerias</a></li>
+            <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="contato.html">Fale com a equipe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Transparência</h2>
+          <ul>
+            <li><a href="impacto.html">Nosso impacto</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
+    </div>
+  </footer>
+</body>
+</html>
