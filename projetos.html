@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos | Trocaverde</title>
   <meta name="description" content="Conheça as feiras de troca, os pontos parceiros e os coletivos que fazem parte da rede Trocaverde.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Trocaverde — página inicial">
         <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
           <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
           <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
@@ -25,17 +28,23 @@
       </label>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html" aria-current="page">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false">Conteúdo
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+          </li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
         </ul>
+        <a class="btn btn-cta" href="contato.html#formulario">Doar roupas</a>
       </nav>
     </div>
   </header>
@@ -50,18 +59,23 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">Feiras</p>
           <h2>Feiras de troca</h2>
           <p>Encontros presenciais e periódicos, abertos para qualquer pessoa levar e escolher peças.</p>
         </div>
         <div class="grid grid--2">
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Feira</span>
             <h3>Feira de Troca do Brás</h3>
-            <p>Todo primeiro sábado do mês, das 10h às 15h, na praça central do bairro, em parceria com a associação de moradores.</p>
+            <p class="hint">Todo primeiro sábado do mês · 10h às 15h · Praça central do bairro</p>
+            <p>Em parceria com a associação de moradores, reúne voluntários e participantes para uma manhã de troca e conversa.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Feira</span>
             <h3>Feira de Troca da Vila Maria</h3>
-            <p>Todo terceiro domingo do mês, das 9h às 13h, no salão comunitário. Inclui oficina de pequenos reparos em roupas.</p>
+            <p class="hint">Todo terceiro domingo do mês · 9h às 13h · Salão comunitário</p>
+            <p>Inclui oficina de pequenos reparos em roupas, com apoio do coletivo Costura Coletiva.</p>
           </article>
         </div>
       </div>
@@ -69,20 +83,24 @@
 
     <section class="section section--alt">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">Pontos fixos</p>
           <h2>Pontos de troca fixos</h2>
           <p>Locais parceiros que recebem doações e trocas durante a semana.</p>
         </div>
         <div class="grid grid--3">
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Ponto fixo</span>
             <h3>Brechó Segunda Chance</h3>
             <p>Recebe doações e dá desconto em compras para quem contribui com peças em bom estado.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Ponto fixo</span>
             <h3>ONG Fio da Vida</h3>
             <p>Encaminha roupas reaproveitadas para famílias em situação de vulnerabilidade social.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Ponto fixo</span>
             <h3>Espaço Cultural Semente</h3>
             <p>Ponto de coleta fixo que sedia oficinas mensais de customização de roupas.</p>
           </article>
@@ -92,20 +110,24 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">Coletivos</p>
           <h2>Coletivos parceiros</h2>
           <p>Grupos independentes que ajudam a organizar e divulgar a rede em seus territórios.</p>
         </div>
         <div class="grid grid--3">
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Coletivo</span>
             <h3>Costura Coletiva</h3>
             <p>Oficinas gratuitas de reparo e customização, que prolongam a vida útil das peças trocadas.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Coletivo</span>
             <h3>Bairro Consciente</h3>
             <p>Coletivo de mobilização que divulga as feiras de troca porta a porta.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <span class="news-tag">Coletivo</span>
             <h3>Rede Jovem Sustentável</h3>
             <p>Estudantes voluntários que apoiam a logística das feiras e a comunicação digital.</p>
           </article>
@@ -120,6 +142,7 @@
         <div>
           <h2>Trocaverde</h2>
           <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+          <a class="back-to-top" href="#conteudo-principal">Voltar ao topo ↑</a>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -138,9 +161,19 @@
             <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
           </ul>
         </div>
+        <div>
+          <h2>Receba avisos das feiras</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
+            <button type="submit">Assinar</button>
+          </form>
+        </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

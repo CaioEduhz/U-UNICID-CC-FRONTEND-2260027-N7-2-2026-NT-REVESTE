@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato | Trocaverde</title>
   <meta name="description" content="Fale com a equipe do Trocaverde: envie dúvidas, sugestões ou agende uma doação de roupas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Trocaverde — página inicial">
         <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
           <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
           <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
@@ -25,17 +28,23 @@
       </label>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false">Conteúdo
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+          </li>
           <li><a href="contato.html" aria-current="page">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
         </ul>
+        <a class="btn btn-cta" href="contato.html#formulario">Doar roupas</a>
       </nav>
     </div>
   </header>
@@ -48,116 +57,143 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="formulario">
       <div class="container">
         <div class="section-head">
+          <p class="eyebrow">Contato</p>
           <h2>Formulário de contato</h2>
-          <p>Os campos marcados com asterisco (*) são obrigatórios. Nesta versão, o envio é apenas demonstrativo.</p>
+          <p>Os campos marcados com asterisco (*) são obrigatórios. Nesta versão, o envio é demonstrativo.</p>
         </div>
 
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Seus dados</legend>
-            <div class="form-grid">
-              <div class="field full">
-                <label for="nome">Nome completo *</label>
-                <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+        <div class="contact-layout">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqppvkbg" method="post" novalidate>
+            <fieldset>
+              <legend>Seus dados</legend>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="nome">Nome completo *</label>
+                  <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name" aria-describedby="nome-error">
+                  <p class="field-error" id="nome-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="email">E-mail *</label>
+                  <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                  <p class="field-error" id="email-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="telefone">Telefone <span class="hint">(com DDD)</span></label>
+                  <input type="tel" id="telefone" name="telefone" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" title="Informe DDD e número, por exemplo (11) 91234-5678" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="cep">CEP <span class="hint">(ex.: 03071-000)</span></label>
+                  <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" title="Informe 8 dígitos, por exemplo 03071-000" inputmode="numeric" autocomplete="postal-code">
+                </div>
               </div>
-              <div class="field">
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-              </div>
-              <div class="field">
-                <label for="telefone">Telefone <span class="hint">(com DDD, ex.: 11 91234-5678)</span></label>
-                <input type="tel" id="telefone" name="telefone" pattern="\(?\d{2}\)?\s?9?\d{4}-?\d{4}" title="Informe DDD e número, por exemplo (11) 91234-5678" autocomplete="tel">
-              </div>
-              <div class="field">
-                <label for="cep">CEP <span class="hint">(ex.: 03071-000)</span></label>
-                <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" title="Informe 8 dígitos, por exemplo 03071-000" inputmode="numeric" autocomplete="postal-code">
-              </div>
-              <div class="field">
-                <label for="nascimento">Data de nascimento</label>
-                <input type="date" id="nascimento" name="nascimento" autocomplete="bday">
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset>
-            <legend>Sua mensagem</legend>
-            <div class="form-grid">
-              <div class="field">
-                <label for="assunto">Assunto *</label>
-                <select id="assunto" name="assunto" required>
-                  <option value="">Selecione uma opção</option>
-                  <option value="duvida">Dúvida sobre o projeto</option>
-                  <option value="doacao">Agendar doação de roupas</option>
-                  <option value="parceria">Proposta de parceria</option>
-                  <option value="acessibilidade">Relatar problema de acessibilidade</option>
-                </select>
+            <fieldset>
+              <legend>Sua mensagem</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="assunto">Assunto *</label>
+                  <select id="assunto" name="assunto" required aria-describedby="assunto-error">
+                    <option value="">Selecione uma opção</option>
+                    <option value="duvida">Dúvida sobre o projeto</option>
+                    <option value="doacao">Agendar doação de roupas</option>
+                    <option value="parceria">Proposta de parceria</option>
+                    <option value="acessibilidade">Relatar problema de acessibilidade</option>
+                  </select>
+                  <p class="field-error" id="assunto-error" hidden></p>
+                </div>
+                <div class="field" id="pecas-wrap" hidden>
+                  <label for="pecas">Quantidade de peças <span class="hint">(para doações)</span></label>
+                  <input type="number" id="pecas" name="pecas" min="1" max="500" step="1">
+                </div>
+                <div class="field full">
+                  <label for="mensagem">Mensagem *</label>
+                  <textarea id="mensagem" name="mensagem" required minlength="10" maxlength="800" aria-describedby="mensagem-error msg-counter"></textarea>
+                  <p class="field-error" id="mensagem-error" hidden></p>
+                  <p class="char-counter" id="msg-counter">0/800</p>
+                </div>
+                <div class="field full">
+                  <label class="check" for="aceite">
+                    <input type="checkbox" id="aceite" name="aceite" required aria-describedby="aceite-error">
+                    <span>Concordo em receber resposta da equipe pelos contatos informados. *</span>
+                  </label>
+                  <p class="field-error" id="aceite-error" hidden></p>
+                </div>
               </div>
-              <div class="field">
-                <label for="pecas">Quantidade de peças <span class="hint">(para doações)</span></label>
-                <input type="number" id="pecas" name="pecas" min="1" max="500" step="1">
-              </div>
-              <div class="field full">
-                <label for="mensagem">Mensagem *</label>
-                <textarea id="mensagem" name="mensagem" required minlength="10" maxlength="800"></textarea>
-              </div>
-              <div class="field full">
-                <label class="check" for="aceite">
-                  <input type="checkbox" id="aceite" name="aceite" required>
-                  <span>Concordo em receber resposta da equipe pelos contatos informados. *</span>
-                </label>
-              </div>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
-        </form>
+            <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+            <p class="form-success" id="form-success" role="status" tabindex="-1" hidden>Mensagem enviada! Entraremos em contato em até 3 dias úteis.</p>
+          </form>
+
+          <aside class="contact-aside">
+            <div class="card">
+              <h3>Outros canais</h3>
+              <ul class="leaf-list">
+                <li><strong>E-mail:</strong> reveste.trocaverde@gmail.com</li>
+                <li><strong>Telefone:</strong> (11) 4000-1234</li>
+                <li><strong>Endereço:</strong> Rua das Trocas, 120, Brás, São Paulo - SP</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Horário</h3>
+              <p>Segunda a sexta, das 9h às 17h. Respondemos em até 3 dias úteis.</p>
+            </div>
+            <div class="card">
+              <h3>Acessibilidade</h3>
+              <p>Encontrou uma barreira no site? Selecione o assunto “Relatar problema de acessibilidade” e conte o que aconteceu.</p>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
     <section class="section section--alt">
       <div class="container">
         <div class="section-head">
-          <h2>Outros canais</h2>
-          <p>Dados fictícios, criados para fins acadêmicos.</p>
-        </div>
-        <ul class="leaf-list">
-          <li><strong>E-mail:</strong> contato@trocaverde.example</li>
-          <li><strong>Telefone:</strong> (11) 4000-1234</li>
-          <li><strong>Endereço:</strong> Rua das Trocas, 120, Brás, São Paulo - SP</li>
-          <li><strong>Atendimento:</strong> segunda a sexta, das 9h às 17h</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
+          <p class="eyebrow">Equipe</p>
           <h2>Quem faz o Trocaverde</h2>
           <p>Equipe ReVeste, responsável pelo desenvolvimento deste site.</p>
         </div>
         <div class="grid grid--2">
-          <article class="card">
-            <h3>Ana Souza</h3>
-            <p class="team-role">Líder da equipe</p>
-            <p>Responsável por index, sobre, contato e orçamento de hospedagem.</p>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">CA</span>
+            <h3>Caio Almeida</h3>
+            <p class="team-role">Desenvolvimento</p>
+            <p>Responsável por desenvolver as páginas HTML</p>
           </article>
-          <article class="card">
-            <h3>Bruno Lima</h3>
-            <p class="team-role">Conteúdo e documentação</p>
-            <p>Responsável por projetos, impacto e pela pasta /docs.</p>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">DH</span>
+            <h3>Davi Henrique</h3>
+            <p class="team-role">Pesquisa e Recursos</p>
+            <p>Responsável pela fonte de mídias e dados relacionados</p>
           </article>
-          <article class="card">
-            <h3>Carla Mendes</h3>
-            <p class="team-role">Acessibilidade e imagens</p>
-            <p>Responsável por acessibilidade e galeria.</p>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">GW</span>
+            <h3>Gabrielly Witai</h3>
+            <p class="team-role">Marketing e Apresentação</p>
+            <p>Responsável por desenvolver a apresentação do projeto</p>
           </article>
-          <article class="card">
-            <h3>Diego Rocha</h3>
-            <p class="team-role">Mídia e notícias</p>
-            <p>Responsável por mídia e notícias.</p>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">IS</span>
+            <h3>Igor Santos</h3>
+            <p class="team-role">Deploy e Testes</p>
+            <p>Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos</p>
+          </article>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">IC</span>
+            <h3>Isabela Calisto</h3>
+            <p class="team-role">Análise e Documentação</p>
+            <p>Responsável pela análise e documentação do projeto</p>
+          </article>
+          <article class="card team-card">
+            <span class="avatar" aria-hidden="true">MP</span>
+            <h3>Maria Peres</h3>
+            <p class="team-role">Marketing e Apresentação</p>
+            <p>Responsável por desenvolver a apresentação do projeto</p>
           </article>
         </div>
       </div>
@@ -170,6 +206,7 @@
         <div>
           <h2>Trocaverde</h2>
           <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+          <a class="back-to-top" href="#conteudo-principal">Voltar ao topo ↑</a>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -188,9 +225,19 @@
             <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
           </ul>
         </div>
+        <div>
+          <h2>Receba avisos das feiras</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
+            <button type="submit">Assinar</button>
+          </form>
+        </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

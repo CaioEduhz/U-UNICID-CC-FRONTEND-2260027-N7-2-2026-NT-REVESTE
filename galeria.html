@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria | Trocaverde</title>
   <meta name="description" content="Galeria de peças disponíveis para troca na rede Trocaverde, com legendas e fonte de cada item.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Trocaverde — página inicial">
         <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
           <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
           <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
@@ -25,17 +28,23 @@
       </label>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="galeria.html" aria-current="page">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false">Conteúdo
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="galeria.html" aria-current="page">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+          </li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
         </ul>
+        <a class="btn btn-cta" href="contato.html#formulario">Doar roupas</a>
       </nav>
     </div>
   </header>
@@ -44,100 +53,123 @@
     <section class="page-hero">
       <div class="container">
         <h1>Galeria de peças</h1>
-        <p>Uma amostra do que circula nos pontos de troca. Nesta primeira versão, cada quadro é uma ilustração que representa uma peça registrada; as fotos reais entram na próxima etapa.</p>
+        <p>Uma amostra do que circula nos pontos de troca. Clique em uma peça para ver os detalhes em tela cheia.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="visually-hidden">Peças disponíveis para troca</h2>
-        <div class="gallery-grid">
-          <figure>
-            <div class="swatch" style="background:#9CC6A0;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Camiseta listrada azul e branca, tamanho M" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+        <div class="section-head">
+          <p class="eyebrow">Filtre por categoria</p>
+          <h2 class="visually-hidden">Peças disponíveis para troca</h2>
+        </div>
+        <div class="gallery-filters" role="group" aria-label="Filtrar peças por categoria">
+          <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button type="button" data-filter="camisetas" aria-pressed="false">Camisetas/Blusas</button>
+          <button type="button" data-filter="calcas" aria-pressed="false">Calças</button>
+          <button type="button" data-filter="casacos" aria-pressed="false">Casacos/Jaquetas</button>
+          <button type="button" data-filter="vestidos" aria-pressed="false">Vestidos</button>
+          <button type="button" data-filter="calcados" aria-pressed="false">Calçados</button>
+        </div>
+
+        <div class="gallery-grid" data-gallery>
+          <!-- 1. Camisa Branca -->
+          <figure data-category="camisetas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Camisa branca de botão, tamanho M">
+            <div class="swatch">
+              <img src="img/BlusaSocialM.jpg" alt="Camisa branca de botão com mangas curtas." loading="lazy">
             </div>
-            <figcaption>Camiseta listrada azul e branca, tamanho M.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
+            <figcaption>Camisa branca de botão, tamanho M.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#F3ECDC;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Blusa de linho bege, tamanho P" style="color:#B8613F;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 2. Calça Jeans -->
+          <figure data-category="calcas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Calça jeans reta, tamanho 40">
+            <div class="swatch">
+              <img src="img/CalcaJeansReta40.jpg" alt="Calça jeans azul escura de corte reto." loading="lazy">
             </div>
-            <figcaption>Blusa de linho bege, tamanho P.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
+            <figcaption>Calça jeans reta, tamanho 40.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#CFE0D2;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Camiseta estampada de banda, tamanho G" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 3. Calça Moletom -->
+          <figure data-category="calcas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Calça de moletom cinza, tamanho G">
+            <div class="swatch">
+              <img src="img/CalcaMoletomG.jpg" alt="Calça de moletom cinza mescla com punhos elásticos." loading="lazy">
             </div>
-            <figcaption>Camiseta estampada de banda, tamanho G.<span class="fonte">Fonte: Doação na Feira da Vila Maria</span></figcaption>
+            <figcaption>Calça de moletom cinza, tamanho G.<span class="fonte">Fonte: Doação na Vila Maria</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#E8D9C3;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Blusa social branca, tamanho M" style="color:#3E6B52;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 4. Camiseta AC/DC -->
+          <figure data-category="camisetas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Camiseta preta estampada da banda AC/DC, tamanho G">
+            <div class="swatch">
+              <img src="img/CamisaBandaG.jpeg" alt="Camiseta preta com estampa da banda AC/DC." loading="lazy">
             </div>
-            <figcaption>Blusa social branca, tamanho M.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
+            <figcaption>Camiseta preta AC/DC, tamanho G.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#B8DBC0;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Calça jeans reta, tamanho 40" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 5. Camisa Bege -->
+          <figure data-category="camisetas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Camisa bege de botão, tamanho P">
+            <div class="swatch">
+              <img src="img/CamisaLinhoP.jpeg" alt="Camisa bege de botão com mangas curtas." loading="lazy">
             </div>
-            <figcaption>Calça jeans reta, tamanho 40.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
+            <figcaption>Camisa bege de botão, tamanho P.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#F3ECDC;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Saia midi plissada, tamanho P" style="color:#B8613F;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 6. Camisa Listrada -->
+          <figure data-category="camisetas" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Camisa listrada azul e branca, tamanho M">
+            <div class="swatch">
+              <img src="img/CamisaListradaM.jpeg" alt="Camisa com listras verticais azuis e brancas." loading="lazy">
             </div>
-            <figcaption>Saia midi plissada, tamanho P.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
+            <figcaption>Camisa listrada azul e branca, tamanho M.<span class="fonte">Fonte: Doação na Vila Maria</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#9CC6A0;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Calça de moletom cinza, tamanho G" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 7. Casaco Verde -->
+          <figure data-category="casacos" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Casaco de lã verde-musgo, tamanho G">
+            <div class="swatch">
+              <img src="img/CasacoLaG.jpg" alt="Casaco longo de lã na cor verde-musgo." loading="lazy">
             </div>
-            <figcaption>Calça de moletom cinza, tamanho G.<span class="fonte">Fonte: Doação na Feira da Vila Maria</span></figcaption>
+            <figcaption>Casaco de lã verde-musgo, tamanho G.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#CFE0D2;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Jaqueta jeans clássica, tamanho M" style="color:#9C5136;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 8. Jaqueta Jeans -->
+          <figure data-category="casacos" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Jaqueta jeans clássica, tamanho M">
+            <div class="swatch">
+              <img src="img/JaquetaJeansM.jpg" alt="Jaqueta jeans azul clássica com botões." loading="lazy">
             </div>
-            <figcaption>Jaqueta jeans clássica, tamanho M.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
+            <figcaption>Jaqueta jeans clássica, tamanho M.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
           </figure>
 
-          <figure>
-            <div class="swatch" style="background:#E8D9C3;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Casaco de lã verde-musgo, tamanho G" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
-            </div>
-            <figcaption>Casaco de lã verde-musgo, tamanho G.<span class="fonte">Fonte: Doação na Feira do Brás</span></figcaption>
-          </figure>
-
-          <figure>
-            <div class="swatch" style="background:#B8DBC0;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Vestido floral de verão, tamanho P" style="color:#9C5136;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
-            </div>
-            <figcaption>Vestido floral de verão, tamanho P.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
-          </figure>
-
-          <figure>
-            <div class="swatch" style="background:#F3ECDC;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Vestido longo de festa, tamanho M" style="color:#2B4C3A;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
-            </div>
-            <figcaption>Vestido longo de festa, tamanho M.<span class="fonte">Fonte: Doação na Feira da Vila Maria</span></figcaption>
-          </figure>
-
-          <figure>
-            <div class="swatch" style="background:#9CC6A0;">
-              <svg viewBox="0 0 48 48" role="img" aria-label="Ilustração de peça de roupa: Tênis casual branco, número 38" style="color:#9C5136;"><path d="M24 6a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.5V16l14 8a3 3 0 0 1-1.5 5.6H9.5A3 3 0 0 1 8 24l14-8v-2.5c-1.2-.7-2-2-2-3.5a4 4 0 0 1 4-4z" fill="currentColor"/></svg>
+          <!-- 9. Tênis Branco -->
+          <figure data-category="calcados" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Tênis casual branco, número 38">
+            <div class="swatch">
+              <img src="img/TenisBranco38.jpg" alt="Par de tênis casual branco." loading="lazy">
             </div>
             <figcaption>Tênis casual branco, número 38.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
           </figure>
+
+          <!-- 10. Vestido Floral -->
+          <figure data-category="vestidos" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Vestido floral de verão, tamanho P">
+            <div class="swatch">
+              <img src="img/VestidoFloralM.jpg" alt="Vestido longo branco com estampa floral e fenda." loading="lazy">
+            </div>
+            <figcaption>Vestido floral de verão, tamanho P.<span class="fonte">Fonte: Doação na Vila Maria</span></figcaption>
+          </figure>
+
+          <!-- 11. Vestido Marrom -->
+          <figure data-category="vestidos" data-lightbox tabindex="0" role="button" aria-label="Ampliar: Vestido longo marrom de festa, tamanho M">
+            <div class="swatch">
+              <img src="img/VestidoLongoM.jpg" alt="Vestido longo marrom com decote V e mangas bufantes." loading="lazy">
+            </div>
+            <figcaption>Vestido longo de festa, tamanho M.<span class="fonte">Fonte: Acervo da equipe ReVeste</span></figcaption>
+          </figure>
+
         </div>
       </div>
     </section>
+
+    <dialog id="lightbox" aria-label="Visualizar peça">
+      <button type="button" class="close" aria-label="Fechar">×</button>
+      <div class="lightbox-content"></div>
+      <p class="lightbox-caption"></p>
+    </dialog>
   </main>
 
   <footer class="site-footer">
@@ -146,6 +178,7 @@
         <div>
           <h2>Trocaverde</h2>
           <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+          <a class="back-to-top" href="#conteudo-principal">Voltar ao topo ↑</a>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -164,9 +197,19 @@
             <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
           </ul>
         </div>
+        <div>
+          <h2>Receba avisos das feiras</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
+            <button type="submit">Assinar</button>
+          </form>
+        </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

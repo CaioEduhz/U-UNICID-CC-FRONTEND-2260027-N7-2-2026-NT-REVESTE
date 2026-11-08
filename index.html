@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trocaverde — troque roupas, não o planeta</title>
   <meta name="description" content="Trocaverde é uma rede comunitária de troca e reaproveitamento de roupas que combate o descarte têxtil e incentiva o consumo consciente.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Trocaverde — página inicial">
         <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
           <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
           <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
@@ -25,31 +28,44 @@
       </label>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html" aria-current="page">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html">Acessibilidade</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false">
+              Conteúdo
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            </ul>
+          </li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
         </ul>
+        <a class="btn btn-cta" href="contato.html#formulario">Doar roupas</a>
       </nav>
     </div>
   </header>
 
   <main id="conteudo-principal">
     <section class="hero">
+      <div class="hero-blobs" aria-hidden="true">
+        <svg class="blob-1" viewBox="0 0 200 200"><path d="M44,-58C60,-48,79,-38,86,-23C93,-8,88,12,78,28C68,44,53,56,36,63C19,70,0,72,-19,68C-38,64,-57,54,-68,39C-79,24,-82,4,-77,-14C-72,-32,-59,-47,-43,-57C-27,-67,-8,-72,9,-70C26,-68,32,-68,44,-58Z" fill="#9CC6A0" transform="translate(100 100)"/></svg>
+        <svg class="blob-2" viewBox="0 0 200 200"><path d="M38,-49C50,-40,61,-29,66,-16C71,-3,70,12,64,26C58,40,47,53,33,60C19,67,2,68,-15,64C-32,60,-49,51,-59,37C-69,23,-72,4,-67,-13C-62,-30,-49,-44,-34,-53C-19,-62,-2,-66,13,-63C28,-60,26,-58,38,-49Z" fill="#F3ECDC" transform="translate(100 100)"/></svg>
+      </div>
       <div class="container">
         <div>
+          <p class="eyebrow" style="color:#F3ECDC;">Rede comunitária de troca de roupas</p>
           <h1>Troque roupas, não o planeta.</h1>
           <p class="lede">O Trocaverde conecta pessoas, brechós e coletivos para dar uma segunda vida às roupas paradas no armário, reduzindo o descarte têxtil e o consumo de peças novas.</p>
           <p>
             <a class="btn btn-primary" href="projetos.html">Como participar</a>
             <a class="btn btn-outline" href="impacto.html">Ver o impacto</a>
           </p>
+          <p class="hero-trust">8 pontos ativos · 1.240 peças trocadas · 3,1 mi de litros de água economizados</p>
         </div>
         <svg class="hero-figure" viewBox="0 0 300 300" role="img" aria-label="Ilustração de uma camiseta cercada por setas circulares, representando a troca de roupas">
           <circle cx="150" cy="150" r="128" fill="none" stroke="#9CC6A0" stroke-width="14" stroke-dasharray="700" stroke-dashoffset="55" stroke-linecap="round"/>
@@ -63,46 +79,19 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="stats-strip" aria-label="Números do Trocaverde">
       <div class="container">
-        <div class="section-head">
-          <h2>Um ciclo simples: leve, troque, reaproveite</h2>
-          <p>Em vez de descartar uma peça em bom estado, você a coloca de volta em circulação, e ela ganha um novo dono e uma nova história.</p>
-        </div>
         <div class="grid grid--3">
-          <article class="card">
-            <h3>Leve</h3>
-            <p>Separe roupas em bom estado que você não usa mais e leve até um dos nossos pontos de troca.</p>
-          </article>
-          <article class="card">
-            <h3>Troque</h3>
-            <p>Escolha outras peças disponíveis no ponto de troca, sem custo. O único critério é o cuidado com o que é compartilhado.</p>
-          </article>
-          <article class="card">
-            <h3>Reaproveite</h3>
-            <p>O que não é trocado vai para ONGs e cooperativas parceiras, prolongando a vida útil de cada peça.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>O impacto de trocar em vez de comprar</h2>
-          <p>Números acumulados em 2026. O detalhamento completo está na página de impacto.</p>
-        </div>
-        <div class="grid grid--3">
-          <div class="stat-card">
-            <span class="stat-number">1.240</span>
+          <div class="stat-overlap reveal">
+            <span class="stat-number" data-counter="1240">0</span>
             <p>peças trocadas ou reaproveitadas</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-overlap reveal">
             <span class="stat-number">3,1 mi</span>
             <p>litros de água economizados (estimativa)</p>
           </div>
-          <div class="stat-card">
-            <span class="stat-number">8</span>
+          <div class="stat-overlap reveal">
+            <span class="stat-number" data-counter="8">0</span>
             <p>pontos de troca ativos na cidade</p>
           </div>
         </div>
@@ -111,7 +100,59 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Um ciclo simples: leve, troque, reaproveite</h2>
+          <p>Em vez de descartar uma peça em bom estado, você a coloca de volta em circulação, e ela ganha um novo dono e uma nova história.</p>
+        </div>
+        <div class="steps reveal">
+          <div class="step">
+            <h3>Leve</h3>
+            <p>Separe roupas em bom estado que você não usa mais e leve até um dos nossos pontos de troca.</p>
+          </div>
+          <div class="step">
+            <h3>Troque</h3>
+            <p>Escolha outras peças disponíveis no ponto de troca, sem custo. O único critério é o cuidado com o que é compartilhado.</p>
+          </div>
+          <div class="step">
+            <h3>Reaproveite</h3>
+            <p>O que não é trocado vai para ONGs e cooperativas parceiras, prolongando a vida útil de cada peça.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Impacto</p>
+          <h2>O impacto de trocar em vez de comprar</h2>
+          <p>Números acumulados em 2026. O detalhamento completo está na página de impacto.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="card reveal">
+            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 8a6 6 0 0 1 12 0v4l8 5a3 3 0 0 1-2 5.5H12A3 3 0 0 1 10 17l8-5z" fill="currentColor"/></svg>
+            <h3>Roupas em circulação</h3>
+            <p>1.240 peças já encontraram um novo dono, evitando que virassem resíduo.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c8 8 14 14 14 22a14 14 0 0 1-28 0c0-8 6-14 14-22z" fill="currentColor"/></svg>
+            <h3>Água economizada</h3>
+            <p>Cada peça que deixa de ser produzida poupa, em média, 2.500 litros de água.</p>
+          </article>
+          <article class="card reveal">
+            <svg class="card-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 40V20l14-10 14 10v20H30V28H18v12z" fill="currentColor"/></svg>
+            <h3>Pontos ativos</h3>
+            <p>Oito pontos de troca fixos espalhados pela cidade, além das feiras mensais.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Inclusão</p>
           <h2>Feito para todo mundo</h2>
           <p>O site e os pontos de troca são pensados para qualquer pessoa, incluindo quem usa leitor de tela, navega só pelo teclado ou precisa de alto contraste.</p>
           <p><a href="acessibilidade.html">Conheça nossas medidas de acessibilidade</a></p>
@@ -126,6 +167,7 @@
         <div>
           <h2>Trocaverde</h2>
           <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+          <a class="back-to-top" href="#conteudo-principal">Voltar ao topo ↑</a>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -144,9 +186,20 @@
             <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
           </ul>
         </div>
+        <div>
+          <h2>Receba avisos das feiras</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
+            <button type="submit">Assinar</button>
+          </form>
+          <p class="social-note">Um e-mail por mês, com datas e locais das próximas feiras. Sem spam.</p>
+        </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>

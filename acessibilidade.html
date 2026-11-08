@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acessibilidade | Trocaverde</title>
   <meta name="description" content="Medidas de acessibilidade digital e física adotadas pelo Trocaverde para incluir pessoas com deficiência.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +15,7 @@
 
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Trocaverde — página inicial">
         <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
           <path d="M20 4c-2.8 0-5 2-5 4.4L8 11v6l4-1.6V34h16V15.4L32 17v-6l-7-2.6C25 6 22.8 4 20 4z" fill="#ffffff"/>
           <path d="M20 4c2 2 2 5-1 6-1.6-2-1-4.6 1-6z" fill="#B8613F"/>
@@ -25,17 +28,23 @@
       </label>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="projetos.html">Projetos</a></li>
           <li><a href="impacto.html">Impacto</a></li>
-          <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="midia.html">Mídia</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
+          <li class="has-dropdown">
+            <button type="button" class="dropdown-toggle" aria-expanded="false">Conteúdo
+              <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <ul class="dropdown">
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="midia.html">Mídia</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
+            </ul>
+          </li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
         </ul>
+        <a class="btn btn-cta" href="contato.html#formulario">Doar roupas</a>
       </nav>
     </div>
   </header>
@@ -50,9 +59,10 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>No site</h2>
-          <p>O Trocaverde foi construído para funcionar bem com tecnologias assistivas.</p>
+        <div class="section-head reveal">
+          <p class="eyebrow">No site</p>
+          <h2>Feito para tecnologias assistivas</h2>
+          <p>O Trocaverde foi construído para funcionar bem com leitores de tela, navegação por teclado e ajustes de contraste.</p>
         </div>
         <ul class="leaf-list grid grid--2">
           <li><strong>Navegação por teclado:</strong> menu, links e formulário podem ser percorridos sem mouse, com um link para pular direto ao conteúdo.</li>
@@ -67,9 +77,10 @@
 
     <section class="section section--alt">
       <div class="container">
-        <div class="section-head">
-          <h2>Nos pontos de troca físicos</h2>
-          <p>A inclusão não termina na tela. Os locais parceiros seguem um checklist mínimo.</p>
+        <div class="section-head reveal">
+          <p class="eyebrow">Nos pontos físicos</p>
+          <h2>Inclusão que vai além da tela</h2>
+          <p>Os locais parceiros seguem um checklist mínimo de acessibilidade.</p>
         </div>
         <ul class="leaf-list grid grid--2">
           <li><strong>Acesso sem degraus:</strong> rampas ou entrada no nível da calçada nos pontos fixos.</li>
@@ -82,7 +93,8 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
+          <p class="eyebrow">Contínuo</p>
           <h2>Encontrou uma barreira?</h2>
           <p>Acessibilidade é um processo contínuo. Se algo não funcionar como deveria, avise a equipe pela <a href="contato.html">página de contato</a>, escolhendo o assunto "Relatar problema de acessibilidade".</p>
         </div>
@@ -96,6 +108,7 @@
         <div>
           <h2>Trocaverde</h2>
           <p>Uma rede comunitária de troca de roupas que transforma o guarda-roupa parado em economia circular, sem custo e sem descarte.</p>
+          <a class="back-to-top" href="#conteudo-principal">Voltar ao topo ↑</a>
         </div>
         <div>
           <h2>Navegação</h2>
@@ -114,9 +127,19 @@
             <li><a href="orcamento_hospedagem.html">Orçamento do site</a></li>
           </ul>
         </div>
+        <div>
+          <h2>Receba avisos das feiras</h2>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden">Seu e-mail</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="seu@email.com" required autocomplete="email">
+            <button type="submit">Assinar</button>
+          </form>
+        </div>
       </div>
       <p class="footer-bottom">Projeto acadêmico da equipe ReVeste — Atividade A2, Front-End, UNICID. Conteúdo fictício, produzido para fins educacionais.</p>
     </div>
   </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
