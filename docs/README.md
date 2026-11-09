@@ -47,7 +47,7 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 
 ## Tecnologias e ferramentas
 
-- HTML5 para estruturação das páginas;
+- HTML5  para estruturação das páginas;
 - CSS3 para identidade visual e responsividade;
 - JavaScript, conforme os requisitos da entrega A2;
 - Git e GitHub para controle de versão e colaboração;
