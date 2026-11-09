@@ -1,29 +1,55 @@
 # Diário de bordo — Trocaverde
 
-## Decisões
+Este diário reúne decisões, aprendizados, dificuldades e atividades registradas durante o desenvolvimento. As entradas abaixo se limitam às informações presentes nos documentos e evidências consultados.
 
-- **Tema:** escolhemos moda circular e troca de roupas por render conteúdo natural para as 10 páginas obrigatórias (impacto em dados, galeria de peças, notícias sobre fast fashion).
-- **Estrutura:** HTML estático e uma única folha de estilos (`css/style.css`), sem JavaScript, como permite a atividade.
-- **Menu responsivo:** no celular, o menu abre e fecha com um campo `checkbox` e CSS, sem JavaScript, mantendo o uso por teclado.
-- **Paleta:** verdes (sustentabilidade) com terracota e bege (tecido e artesanato). A terracota escura foi usada em botões e textos para garantir contraste com texto branco.
-- **Galeria:** na primeira versão, usamos ilustrações em SVG com texto alternativo e legenda, porque ainda não temos fotos próprias das peças.
-- **Orçamento:** recomendamos GitHub Pages por custo zero e HTTPS automático, com domínio `trocaverde.com.br`.
+## 21/09/2026 — Definição do projeto e do escopo
 
-## Aprendizados
+- **Tema escolhido:** moda circular e troca de roupas. A escolha permitiu distribuir o conteúdo entre as dez páginas previstas, abordando galeria de peças, impacto ambiental, notícias sobre *fast fashion* e acessibilidade.
+- **Proposta:** apresentar uma rede comunitária de troca e reaproveitamento de roupas, incentivando o consumo consciente e a economia circular.
+- **Estrutura inicial:** site estático em HTML e CSS, com dez páginas interligadas.
+- **Identidade visual:** combinação de tons de verde, terracota e bege, associando sustentabilidade, tecido e artesanato.
+- **Galeria:** foram previstas ilustrações em SVG enquanto a equipe não tivesse fotografias próprias das peças.
+- **Hospedagem:** GitHub Pages foi indicado como alternativa preferencial por oferecer hospedagem gratuita para site estático e HTTPS.
 
-- Marcar o item atual do menu com `aria-current="page"` ajuda leitores de tela e também permite estilizar a página ativa.
-- Rótulos `<label for>` ligados a cada campo e o atributo `pattern` com `title` tornam a validação do formulário compreensível sem JavaScript.
-- Tabelas precisam de `<caption>` e de `scope` nos cabeçalhos para serem lidas corretamente por tecnologias assistivas.
+## 26/10/2026 — Verificações registradas
 
-## Dificuldades
+- Foi executada uma verificação automática dos links internos das dez páginas. O relatório registra ausência de links quebrados.
+- Foram conferidos, nas dez páginas, elementos estruturais como `lang="pt-BR"`, título, meta description, um `<h1>`, regiões semânticas e associação entre `label` e `id`.
+- O relatório também registra que não foram encontrados elementos `<img>` sem atributo `alt`; as ilustrações SVG da galeria possuem identificação acessível.
+- A página inicial foi aberta no Chromium em larguras de 1280 px e 390 px. O registro informa ausência de rolagem horizontal na largura menor.
+- Permaneceram pendentes a validação formal no W3C, os testes com teclado e leitor de tela, a verificação de contraste e os testes completos do formulário.
 
-- Manter o mesmo cabeçalho e rodapé em 10 páginas sem JavaScript ou templates: usamos um pequeno script de geração para evitar divergências.
-- Conseguir vídeo e áudio próprios dentro do prazo. Mantivemos os caminhos e as tags prontos para a substituição.
-- Equilibrar dados fictícios e verossimilhança nas tabelas de impacto; indicamos nas páginas que os dados são fictícios.
+## 09/11/2026 — Revisão da documentação para a A2
 
-## Próximos passos
+- A documentação foi reorganizada para refletir os requisitos da segunda entrega.
+- Foi analisado o código JavaScript fornecido pela equipe, que contém interações para menu dropdown, efeitos de revelação ao rolar, contadores animados, filtros e lightbox da galeria.
+- No formulário, o código restaura e salva rascunhos com `localStorage`, controla a exibição do campo de quantidade de peças, atualiza o contador de caracteres, valida campos obrigatórios/e-mail/tamanho mínimo e envia os dados ao Formspree por `fetch()`.
+- A análise do código permite identificar a implementação prevista, mas não substitui a execução dos testes no navegador.
+- Foram identificados pontos a conferir: validação explícita de telefone e CEP, estilo visual dos campos com `aria-invalid`, disponibilidade do elemento de sucesso para foco e envio efetivo pelo Formspree.
+- Foi criado um registro específico para o uso de IA nesta revisão documental, sem atribuir à ferramenta atividades anteriores que não estejam documentadas.
 
-1. Produzir ou obter o vídeo, o áudio e o poster da página de mídia.
-2. Substituir as ilustrações da galeria por fotos reais com crédito.
-3. Rodar o W3C Validator em todas as páginas e registrar os resultados.
-4. Testar a navegação por teclado e com leitor de tela (NVDA ou VoiceOver).
+
+## 09/11/2026 — Conferência do repositório público
+
+- O repositório do projeto foi disponibilizado publicamente no GitHub.
+- Na página principal foram identificados dez arquivos HTML e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`.
+- A página do repositório exibia cinco commits no momento da consulta. Esse dado é apenas um retrato da consulta; é necessário verificar o histórico completo e a participação de todos os integrantes.
+- O README da raiz ainda continha descrições da primeira entrega, como JavaScript opcional e pasta `js/` reservada. Essas informações precisam ser substituídas por uma descrição compatível com a A2.
+- A descrição curta do repositório menciona venda de roupas sustentáveis, enquanto o conteúdo do README apresenta uma rede comunitária de troca e reaproveitamento. Foi recomendada a padronização da descrição.
+- A publicação do site em HTTPS, a existência de branch com pull request e a conclusão dos testes não foram comprovadas apenas pela página inicial do repositório.
+
+## Aprendizados registrados
+
+- O atributo `aria-current="page"` identifica a página atual no menu e auxilia tecnologias assistivas.
+- Associar cada `<label>` ao campo correspondente melhora a compreensão e a utilização dos formulários.
+- Atributos como `pattern` e `title` podem orientar o preenchimento dos campos.
+- Tabelas devem possuir título/legenda e cabeçalhos corretamente identificados para facilitar a leitura por tecnologias assistivas.
+- A documentação deve indicar quando dados são fictícios, especialmente em páginas que apresentam indicadores de impacto.
+
+## Dificuldades registradas
+
+- Manter cabeçalho e rodapé consistentes nas dez páginas.
+- Obter materiais audiovisuais próprios dentro do prazo.
+- Substituir ilustrações por fotografias próprias ou devidamente licenciadas.
+- Apresentar indicadores fictícios de forma verossímil sem induzir o visitante a interpretá-los como resultados reais.
+- Concluir e registrar testes de acessibilidade e validação formal.
