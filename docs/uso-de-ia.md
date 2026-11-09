@@ -29,3 +29,19 @@ A IA não substituiu a análise, as decisões, o desenvolvimento ou a validaçã
 - Preservar os dados reais e as decisões da equipe.
 - Não inventar funcionalidades, resultados de testes ou informações.
 - Diferenciar recursos implementados de melhorias planejadas.
+
+## 4. Resultados do apoio e revisão humana
+
+O ChatGPT foi utilizado para auxiliar a equipe nas seguintes atividades:
+
+- Sugerir melhorias na estrutura e na organização das páginas do site.
+- Auxiliar na análise das funcionalidades JavaScript desenvolvidas.
+- Apresentar sugestões de usabilidade e acessibilidade.
+- Apoiar a organização dos conteúdos da apresentação.
+- Identificar divergências e informações incompletas na documentação.
+- Sugerir melhorias na clareza e na formatação dos arquivos Markdown.
+- Auxiliar na identificação de testes e validações pendentes.
+
+### Revisão humana
+
+As sugestões fornecidas pela IA foram submetidas à análise da equipe. A implementação do código, as decisões sobre o projeto, a execução dos testes e a aprovação dos materiais permaneceram sob responsabilidade dos integrantes.
