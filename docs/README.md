@@ -34,16 +34,16 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 
 | Arquivo | Conteúdo |
 |---|---|
-| `index.html` | Apresentação do Trocaverde e acesso às principais seções |
-| `sobre.html` | História, missão, visão e valores |
-| `projetos.html` | Iniciativas e ações de troca |
-| `impacto.html` | Indicadores ilustrativos e informações sobre impacto ambiental |
-| `acessibilidade.html` | Recursos de acessibilidade e inclusão |
-| `galeria.html` | Galeria ilustrativa de peças para troca |
-| `midia.html` | Conteúdo audiovisual e mapa incorporado |
-| `noticias.html` | Conteúdos informativos sobre moda e sustentabilidade |
-| `contato.html` | Formulário e canais de contato |
-| `orcamento_hospedagem.html` | Comparação de hospedagem e domínio |
+| `index.html` | Apresentação do Trocaverde e acesso às principais seções. |
+| `sobre.html` | História, missão, visão e valores. |
+| `projetos.html` | Iniciativas e ações de troca. |
+| `impacto.html` | Indicadores ilustrativos e informações sobre impacto ambiental. |
+| `acessibilidade.html` | Recursos de acessibilidade e inclusão. |
+| `galeria.html` | Galeria ilustrativa de peças para troca. |
+| `midia.html` | Conteúdo audiovisual e mapa incorporado. |
+| `noticias.html` | Conteúdos informativos sobre moda e sustentabilidade. |
+| `contato.html` | Formulário e canais de contato. |
+| `orcamento_hospedagem.html` | Comparação de hospedagem e domínio. |
 
 ## Tecnologias e ferramentas
 
@@ -137,4 +137,4 @@ ReVeste/
 | Gabrielly Witai | Responsável por desenvolver a apresentação do projeto |
 | Igor Santos | Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos |
 | Isabela Calisto | Responsável pela análise e documentação do projeto |
-| Maria Eduarda Peres | Responsável por criar a apresentação do projeto|
+| Maria Eduarda Peres | Responsável por criar a apresentação do projeto |
