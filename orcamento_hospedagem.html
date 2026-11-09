@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orçamento de hospedagem e domínio | Trocaverde</title>
-  <meta name="description" content="Relatório comparativo de três hospedagens e três domínios para publicar o site do Trocaverde.">
+  <meta name="description" content="Relatório comparativo de hospedagens, incluindo Railway, para publicar o site do Trocaverde.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
   <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
@@ -54,7 +53,7 @@
     <section class="page-hero">
       <div class="container">
         <h1>Orçamento de hospedagem e domínio</h1>
-        <p>Comparativo para publicar o Trocaverde. Os valores são estimativas de referência e devem ser conferidos nos sites dos fornecedores antes de contratar.</p>
+        <p>Comparativo de plataformas para publicar o Trocaverde. Os valores são estimativas de referência e devem ser conferidos nos sites dos fornecedores antes de contratar.</p>
       </div>
     </section>
 
@@ -62,8 +61,8 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Hospedagem</p>
-          <h2>Comparativo de planos</h2>
-          <p>O site é estático (HTML, CSS e JS), então um plano de entrada já atende. Para um projeto sobre sustentabilidade, também pesa a política ambiental do fornecedor.</p>
+          <h2>Comparativo de plataformas</h2>
+          <p>O site é estático (HTML, CSS e JS). O Railway se destaca para quem busca controle sobre o servidor e um custo previsível, enquanto o GitHub Pages é a opção gratuita mais direta.</p>
         </div>
         <div class="table-wrap">
           <table>
@@ -71,26 +70,54 @@
             <thead>
               <tr>
                 <th scope="col">Critério</th>
-                <th scope="col">Opção A: GitHub Pages</th>
-                <th scope="col">Opção B: Hostinger (plano básico)</th>
-                <th scope="col">Opção C: Locaweb (plano básico)</th>
+                <th scope="col">GitHub Pages</th>
+                <th scope="col">Railway (Hobby)</th>
+                <th scope="col">Vercel (Hobby)</th>
               </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">Custo mensal estimado</th><td>Gratuito</td><td>R$ 10 a R$ 20</td><td>R$ 15 a R$ 30</td></tr>
-              <tr><th scope="row">Armazenamento</th><td>1 GB por repositório</td><td>Dezenas de GB em SSD</td><td>Dezenas de GB em SSD</td></tr>
-              <tr><th scope="row">Domínio próprio</th><td>Sim, com configuração de DNS</td><td>Sim, muitas vezes incluso no 1º ano</td><td>Sim, contratado à parte ou em pacote</td></tr>
-              <tr><th scope="row">Certificado HTTPS</th><td>Sim, automático</td><td>Sim, incluso</td><td>Sim, incluso</td></tr>
-              <tr><th scope="row">Suporte</th><td>Documentação e comunidade</td><td>Chat em português</td><td>Telefone e chat em português</td></tr>
-              <tr><th scope="row">Facilidade para a equipe</th><td>Alta, se já usa Git</td><td>Alta, com painel visual</td><td>Média a alta, com painel visual</td></tr>
+              <tr><th scope="row">Custo mensal estimado</th><td>Gratuito</td><td><strong>US$ 5</strong> (inclui US$ 5 de uso)</td><td>Gratuito (uso não comercial)</td></tr>
+              <tr><th scope="row">Custo para uso comercial</th><td>Gratuito</td><td><strong>Incluso no plano</strong></td><td>US$ 20 (plano Pro)</td></tr>
+              <tr><th scope="row">Certificado HTTPS</th><td>Sim, automático</td><td>Sim, automático</td><td>Sim, automático</td></tr>
+              <tr><th scope="row">Domínio próprio</th><td>Sim, com configuração de DNS</td><td>Sim, com CNAME</td><td>Sim</td></tr>
+              <tr><th scope="row">Controle do servidor</th><td>Limitado</td><td><strong>Total (NGINX configurável)</strong></td><td>Limitado</td></tr>
+              <tr><th scope="row">Custo por build</th><td>Não se aplica</td><td><strong>Não cobra</strong></td><td>Não cobra</td></tr>
+              <tr><th scope="row">Melhor para</th><td>Protótipos e projetos open-source</td><td><strong>Controle e previsibilidade</strong></td><td>Front-end moderno (Next.js)</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="hint">Confirmar preços, promoções e condições de renovação nos sites oficiais. Verificar também se o fornecedor publica metas de energia renovável.</p>
+        <p class="hint">O plano Hobby do Railway custa US$ 5/mês e inclui US$ 5 em créditos de uso de recursos (CPU, memória, etc.) por segundo. Para um site estático leve, o consumo tende a ficar dentro desse valor[reference:2][reference:3].</p>
       </div>
     </section>
 
     <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Detalhamento</p>
+          <h2>Por que considerar o Railway?</h2>
+        </div>
+        <div class="grid grid--2">
+          <article class="card reveal">
+            <h3>Custo previsível e transparente</h3>
+            <p>Diferente de plataformas que cobram por assento ou têm limites de uso não comercial, o Railway cobra uma assinatura fixa de US$ 5/mês (plano Hobby) que já cobre os recursos consumidos. Você só paga a mais se ultrapassar esse valor, o que é raro para sites estáticos[reference:4].</p>
+          </article>
+          <article class="card reveal">
+            <h3>Controle total com NGINX</h3>
+            <p>O Railway permite usar um servidor NGINX para servir os arquivos. Isso significa que a equipe pode configurar regras de redirecionamento, cabeçalhos de cache e outras otimizações diretamente no `nginx.conf`, algo impossível em plataformas mais fechadas[reference:5].</p>
+          </article>
+          <article class="card reveal">
+            <h3>Integração direta com GitHub</h3>
+            <p>O deploy é feito automaticamente a cada `push` no repositório. O Railway detecta a configuração, builda e publica o site sem necessidade de scripts complexos, mantendo o fluxo de trabalho que a equipe já utiliza[reference:6].</p>
+          </article>
+          <article class="card reveal">
+            <h3>Sem surpresas com builds</h3>
+            <p>O Railway não cobra pelo tempo de CPU ou memória gastos durante o processo de build (`npm run build`, por exemplo). A cobrança é apenas sobre os recursos do serviço em execução, o que beneficia projetos com etapas de build mais pesadas[reference:7].</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Domínio</p>
@@ -117,14 +144,20 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Recomendação</p>
           <h2>O que a equipe escolheu</h2>
         </div>
-        <p>Para a primeira versão, recomendamos a <strong>Opção A (GitHub Pages)</strong>: custo zero, HTTPS automático e fluxo que a equipe já usa com controle de versão. O domínio sugerido é <strong>trocaverde.com.br</strong>, pelo reconhecimento local.</p>
-        <p>Se o projeto crescer e precisar de e-mail profissional e atendimento por telefone, a migração para uma hospedagem paga (Opção B ou C) é simples, pois o site é estático.</p>
+        <p>O <strong>Railway</strong> é a alternativa mais forte caso o projeto cresça e precise de:
+          <ul class="leaf-list" style="margin-top: 0.5rem;">
+            <li>Controle sobre o servidor (ex: redirecionamentos complexos via NGINX);</li>
+            <li>Hospedagem de um backend ou banco de dados no futuro;</li>
+            <li>Um custo previsível de US$ 5/mês que já cobre o uso típico de um site estático.</li>
+          </ul>
+        </p>
+        <p>Se a migração for necessária, o processo é simples: basta conectar o repositório do GitHub ao Railway e configurar o domínio.</p>
       </div>
     </section>
   </main>
