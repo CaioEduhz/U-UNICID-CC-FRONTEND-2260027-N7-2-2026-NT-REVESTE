@@ -61,3 +61,17 @@ As sugestões fornecidas pela IA foram submetidas à análise da equipe. A imple
 ## 6. Declaração de responsabilidade
 
 A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento e à organização do projeto Trocaverde.
+
+## 7. Conferência do repositório público
+
+Durante a revisão do projeto, foi realizada uma consulta ao repositório público do Trocaverde no GitHub.
+
+A análise registrou:
+
+- Presença de dez arquivos HTML e das principais pastas do projeto.
+- Histórico inicial de cinco commits exibidos na consulta.
+- Identificação de informações que precisavam de atualização no README da raiz.
+- Necessidade de confirmar a publicação HTTPS e as evidências de testes funcionais.
+- Ausência de confirmação de pull request na análise realizada.
+
+A ferramenta de IA não realizou alterações diretamente no repositório. As atualizações e os commits foram realizados pela equipe.
