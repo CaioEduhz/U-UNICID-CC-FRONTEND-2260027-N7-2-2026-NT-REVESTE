@@ -1,9 +1,8 @@
 # Trocaverde — Projeto de Site (A2 | Front-End)
 
 **Equipe:** ReVeste  
-**Instituição:** UNICID — Curso Superior de Informática  
+**Instituição:** UNICID 
 **Disciplina:** Front-End  
-**Data de atualização desta documentação:** 09/11/2026
 
 ## Sobre o projeto
 
