@@ -132,9 +132,9 @@ ReVeste/
 
 | Integrante | Responsabilidades registradas |
 |---|---|
-| Caio Eduardo Almeida | Página inicial, sobre e contato |
-| Davi Henrique | Projetos e documentação |
-| Gabrielly Witai | Mídia, notícias e testes de navegação |
-| Igor Santos | Galeria e impacto |
-| Isabela Calisto | Liderança da equipe e orçamento de hospedagem |
-| Maria Eduarda Peres | Acessibilidade e revisão de acessibilidade |
+| Caio Eduardo Almeida | Responsável por desenvolver as páginas HTML |
+| Davi Henrique | Responsável pela fonte de mídias e dados relacionados |
+| Gabrielly Witai | Responsável por desenvolver a apresentação do projeto |
+| Igor Santos | Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos |
+| Isabela Calisto | Responsável pela análise e documentação do projeto |
+| Maria Eduarda Peres | Responsável por desenvolver a apresentação do projeto |
