@@ -23,10 +23,8 @@ O **Trocaverde** é uma proposta de rede comunitária para troca e reaproveitame
 
 ## Links do projeto
 
-- **Site publicado:** [inserir URL pública HTTPS]
-- **Repositório GitHub:** [inserir URL do repositório]
-
-Os endereços acima não constavam nos materiais consultados e devem ser preenchidos após a publicação e a conferência das permissões do repositório.
+- **Site publicado:** ainda precisa ser informado e testado em HTTPS.
+- **Repositório GitHub:** [https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE](https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE)
 
 ## Objetivo
 
@@ -55,8 +53,7 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 - Git e GitHub para controle de versão e colaboração;
 - W3C Validator e ferramentas de acessibilidade para validação.
 
-**Observação sobre o estado dos arquivos:** os HTMLs consultados fazem referência a `js/main.js`, mas esse arquivo JavaScript e a folha `css/style.css` não estavam entre os arquivos disponibilizados para esta revisão. Portanto, a existência da referência no HTML não comprova, por si só, que os comportamentos JavaScript estejam implementados e funcionando.
-
+**JavaScript:** o código implementa menu dropdown, efeitos de revelação ao rolar, contadores animados, filtros e lightbox da galeria, campo condicional no formulário, contador de caracteres, rascunho em `localStorage` e validação/envio assíncrono do formulário pelo Formspree.
 ## Como executar localmente
 
 1. Baixe ou clone o repositório.
@@ -64,18 +61,72 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 3. Abra `index.html` em um navegador ou utilize a extensão Live Server no Visual Studio Code.
 4. Para conferir a versão final, compare os arquivos locais com a versão publicada.
 
-A estrutura prevista inclui os dez arquivos HTML, a pasta `css/`, a pasta `js/`, os recursos de mídia e a pasta `docs/`. Confira se todos esses itens estão presentes no repositório antes da entrega.
+Na página principal do repositório foram identificados os dez arquivos HTML e as pastas `assets/`, `css/`, `docs/`, `img/` e `js/`. A listagem pública confirma a existência das pastas, mas não permite afirmar, nesta revisão, que todos os arquivos internos estejam completos ou atualizados.
 
-## Organização da documentação
+## Estrutura completa do repositório
 
-Os documentos da pasta `docs/` devem incluir:
+A estrutura abaixo reúne os dez arquivos HTML informados pela equipe e os arquivos/pastas que aparecem na página principal do repositório público. Os nomes dos arquivos internos de algumas pastas não foram todos exibidos na listagem pública; por isso, nesses casos, a documentação descreve a finalidade da pasta sem inventar nomes.
 
-- `diario-de-bordo.md` — decisões, aprendizados, dificuldades e andamento;
-- `escopo-projeto-trocaverde.md` — objetivos, requisitos, limites e critérios de aceitação;
-- `orcamento-hospedagem.md` — comparação de hospedagem e domínio;
-- `evidencias-de-testes.md` — testes realizados e pendências;
-- `melhorias-mvp.md` — evolução da primeira versão;
-- `uso-de-ia.md` — registro transparente do uso de ferramentas de IA.
+```text
+ReVeste/
+├── README.md
+├── index.html
+├── sobre.html
+├── projetos.html
+├── impacto.html
+├── acessibilidade.html
+├── galeria.html
+├── midia.html
+├── noticias.html
+├── contato.html
+├── orcamento_hospedagem.html
+├── favicon.svg
+├── assets/
+│   ├── video/
+│   │   └── mutirao-troca.mp4
+│   └── audio/
+│       └── depoimento-participante.mp3
+├── css/
+│   └── style.css
+├── docs/
+│   ├── diario-de-bordo.md
+│   ├── escopo-projeto-trocaverde.md
+│   ├── orcamento-hospedagem.md
+│   ├── evidencias-de-testes.md
+│   ├── melhorias-mvp.md
+│   └── uso-de-ia.md
+├── img/
+│   └── poster-mutirao.png
+└── js/
+    └── arquivos JavaScript do projeto
+```
+
+### Arquivos HTML
+
+| Arquivo | Conteúdo |
+|---|---|
+| `index.html` | Apresentação do Trocaverde e acesso às principais seções |
+| `sobre.html` | História, missão, visão e valores |
+| `projetos.html` | Iniciativas e ações de troca |
+| `impacto.html` | Indicadores ilustrativos e informações sobre impacto ambiental |
+| `acessibilidade.html` | Recursos de acessibilidade e inclusão |
+| `galeria.html` | Galeria ilustrativa de peças para troca |
+| `midia.html` | Conteúdo audiovisual e mapa incorporado |
+| `noticias.html` | Conteúdos informativos sobre moda e sustentabilidade |
+| `contato.html` | Formulário e canais de contato |
+| `orcamento_hospedagem.html` | Comparação de hospedagem e domínio |
+
+### Pastas e demais arquivos
+
+| Pasta/arquivo | Finalidade |
+|---|---|
+| `assets/` | Recursos de mídia utilizados no site; o README do repositório cita os arquivos de vídeo e áudio de demonstração |
+| `css/` | Folhas de estilo; o arquivo `style.css` concentra a identidade visual e a responsividade |
+| `docs/` | Documentação do projeto: diário, escopo, orçamento, evidências de testes, melhorias do MVP e uso de IA |
+| `img/` | Imagens e materiais visuais; o README cita o pôster do vídeo e a galeria ilustrativa |
+| `js/` | Scripts JavaScript responsáveis pelas interações e funcionalidades da versão A2 |
+| `favicon.svg` | Ícone do site exibido na aba do navegador |
+| `README.md` | Apresentação do projeto, equipe, tecnologias, estrutura e instruções para execução |
 
 ## Distribuição de responsabilidades
 
@@ -87,18 +138,3 @@ Os documentos da pasta `docs/` devem incluir:
 | Igor Santos | Galeria e impacto |
 | Isabela Calisto | Liderança da equipe e orçamento de hospedagem |
 | Maria Eduarda Peres | Acessibilidade e revisão de acessibilidade |
-
-A divisão acima reproduz as responsabilidades registradas no README anterior. Ajustes posteriores devem ser atualizados pela equipe.
-
-## Requisitos da entrega A2 a conferir
-
-- Dez páginas revisadas e interligadas;
-- validação do formulário com JavaScript, incluindo prevenção do envio quando houver erros e mensagens claras;
-- uso de `localStorage` para salvar um rascunho do formulário ou uma preferência;
-- pelo menos uma interação com o DOM acionada por evento;
-- publicação em endereço HTTPS;
-- repositório GitHub com histórico de commits e colaboração da equipe;
-- documentação do uso de IA, incluindo prompts, regras e revisão das respostas;
-- evidências dos testes e capturas de tela solicitadas na atividade.
-
-Consulte `evidencias-de-testes.md` para distinguir os testes já registrados daqueles que ainda precisam ser executados.
