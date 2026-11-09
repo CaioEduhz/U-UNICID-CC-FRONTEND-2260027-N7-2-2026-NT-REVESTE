@@ -23,7 +23,7 @@ O **Trocaverde** é uma proposta de rede comunitária para troca e reaproveitame
 
 ## Links do projeto
 
-- **Site publicado:** [Site Oficial Hospedado no Railway, testado e confirmado em https](https://trocaverde.up.railway.app)
+- **Site publicado:** [https://trocaverde.up.railway.app/](https://trocaverde.up.railway.app/)
 - **Repositório GitHub:** [https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE](https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE)
 
 ## Objetivo
