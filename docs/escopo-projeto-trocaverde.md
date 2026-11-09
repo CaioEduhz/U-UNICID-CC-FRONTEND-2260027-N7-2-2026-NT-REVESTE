@@ -24,7 +24,7 @@ O tema se conecta diretamente ao eixo de sustentabilidade e impacto social da at
 1. Divulgar ao menos 3 pontos físicos de troca (feiras, brechós parceiros, coletivos) no primeiro ano do projeto.
 2. Apresentar dados educativos sobre o impacto ambiental da moda rápida em pelo menos 3 páginas do site.
 3. Tornar 100% do site navegável por teclado e compatível com leitores de tela.
-4. Reunir uma galeria com no mínimo 12 peças fictícias disponíveis para troca, com legendas descritivas.
+4. Reunir uma galeria com no mínimo 10 peças fictícias disponíveis para troca, com legendas descritivas.
 5. Validar o site no W3C sem erros de HTML/CSS.
 
 ## 4. Público-Alvo
