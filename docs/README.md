@@ -25,6 +25,7 @@ O **Trocaverde** é uma proposta de rede comunitária para troca e reaproveitame
 
 - **Site publicado:** [https://trocaverde.up.railway.app/](https://trocaverde.up.railway.app/)
 - **Repositório GitHub:** [https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE](https://github.com/CaioEduhz/U-UNICID-CC-FRONTEND-2260027-N7-2-2026-NT-REVESTE)
+- **Slides da Apresentação:** 
 
 ## Objetivo
 
@@ -54,7 +55,6 @@ Desenvolver um site informativo, responsivo e acessível, composto por dez pági
 - W3C Validator e ferramentas de acessibilidade para validação.
 
 **JavaScript:** o código implementa menu dropdown, efeitos de revelação ao rolar, contadores animados, filtros e lightbox da galeria, campo condicional no formulário, contador de caracteres, rascunho em `localStorage` e validação/envio assíncrono do formulário pelo Formspree.
-
 ## Como executar localmente
 
 1. Baixe ou clone o repositório.
@@ -138,4 +138,4 @@ ReVeste/
 | Gabrielly Witai | Responsável por desenvolver a apresentação do projeto |
 | Igor Santos | Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos |
 | Isabela Calisto | Responsável pela análise e documentação do projeto |
-| Maria Eduarda Peres | Responsável por criar a apresentação do projeto|
+| Maria Eduarda Peres | Responsável por criar a apresentação do projeto |
