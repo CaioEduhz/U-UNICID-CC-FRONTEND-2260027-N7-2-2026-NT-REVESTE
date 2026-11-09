@@ -45,3 +45,19 @@ O ChatGPT foi utilizado para auxiliar a equipe nas seguintes atividades:
 ### Revisão humana
 
 As sugestões fornecidas pela IA foram submetidas à análise da equipe. A implementação do código, as decisões sobre o projeto, a execução dos testes e a aprovação dos materiais permaneceram sob responsabilidade dos integrantes.
+
+## 5. Registro de validação
+
+| Item | Responsável pela conferência |
+|---|---|
+| Conferir nomes e RGMs | Equipe ReVeste |
+| Conferir conteúdo com o repositório final | Equipe ReVeste |
+| Conferir construção e funcionamento do site | Caio |
+| Conferir slides da apresentação | Gabrielly |
+| Confirmar funcionalidades JavaScript | Caio |
+| Conferir URLs de publicação e GitHub | Equipe ReVeste |
+| Aprovar documentação final | Equipe ReVeste |
+
+## 6. Declaração de responsabilidade
+
+A Inteligência Artificial foi utilizada como ferramenta de apoio ao desenvolvimento e à organização do projeto Trocaverde.
