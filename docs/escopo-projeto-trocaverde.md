@@ -97,12 +97,12 @@ O menu principal, presente em todas as páginas, permite acesso direto a qualque
 | Etapa | Responsável | Prazo |
 |---|---|---|
 | Escopo do projeto e definição visual | Todos | Semana 1 |
-| index.html e sobre.html | Ana Souza | Semana 2 |
-| projetos.html e impacto.html | Bruno Lima | Semana 2 |
-| acessibilidade.html e galeria.html | Carla Mendes | Semana 3 |
-| midia.html e noticias.html | Diego Rocha | Semana 3 |
-| contato.html (formulário) e orcamento_hospedagem.html | Ana Souza | Semana 4 |
-| Documentação (/docs) | Bruno Lima | Semana 4 |
+| index.html e sobre.html | Caio Eduardo  | Semana 2 |
+| projetos.html e impacto.html | Davi Henrique  | Semana 2 |
+| acessibilidade.html e galeria.html | Gabrielly Witai  | Semana 3 |
+| midia.html e noticias.html | Maria Eduarda | Semana 3 |
+| contato.html (formulário) e orcamento_hospedagem.html | Isabela Calisto  | Semana 4 |
+| Documentação (/docs) | Maria Eduarda  | Semana 4 |
 | Testes, validação W3C e ajustes finais | Todos | Semana 4 |
 
 ## 11. Riscos e Restrições
