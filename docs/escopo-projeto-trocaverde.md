@@ -4,9 +4,9 @@
 
 - **Nome da equipe:** ReVeste
 - **Nome do projeto/site:** Trocaverde
-- **Integrantes:** Ana Souza, Bruno Lima, Carla Mendes, Diego Rocha
+- **Integrantes:** Caio Eduardo Almeida, Davi Henrique, Gabrielly Witai, Igor Santos, Isabela Calisto, Maria Eduarda Peres
 - **Data:** 21/09/2026
-- **Professor(a)/Disciplina:** Front-End — UNICID
+- **Professor(a)/Disciplina:** Prof. Paulo Fratta / Front-End — UNICID
 
 ## 2. Contexto e Justificativa
 
@@ -122,6 +122,6 @@ O menu principal, presente em todas as páginas, permite acesso direto a qualque
 
 ## 13. Aprovação
 
-- **Responsável pela validação do escopo:** Ana Souza (líder da equipe)
+- **Responsável pela validação do escopo:** Caio Eduardo Almeida (líder da equipe)
 - **Data:** 21/09/2026
-- **Assinatura:** Ana Souza
+- **Assinatura:** Caio Eduardo Almeida
