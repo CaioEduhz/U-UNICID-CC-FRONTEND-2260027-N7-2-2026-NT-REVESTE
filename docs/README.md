@@ -138,4 +138,3 @@ ReVeste/
 | Igor Santos | Responsável pela hospedagem do HTML e validação de acesso ao site e seus recursos |
 | Isabela Calisto | Responsável pela análise e documentação do projeto |
 | Maria Eduarda Peres | Responsável por criar a apresentação do projeto|
-| Maria Eduarda Peres | Responsável por criar a apresentação e fonte de dados do projeto |
